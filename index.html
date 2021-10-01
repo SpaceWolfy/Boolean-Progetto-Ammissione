@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <!--chiamo il mio file css:-->
+    <link rel="stylesheet" href="style.css" />
+    <title>lim - Official Web Page</title>
+  </head>
+
+  <body>
+    <!--Affido al div sottostante la class container, utile per css-->
+    <div class="container">
+      <!--Strutturo la parte superiore del sito, qui dentro ci sono logo e titolo:-->
+      <header>
+        <img src="logo.png" alt="immagine del logo lim" />
+        <div>Taking Booleaners from A to B</div>
+      </header>
+
+      <!--Qui c'è la barra di navigazione che comprende diversi pulsanti utili allo spostamento tra le pagine. N.B. questi pulsanti non portano da nessuna parte-->
+      <nav>
+        <button>Prenota</button>
+        <button>Termina Prenotazione</button>
+        <button>Accendi Luci</button>
+      </nav>
+
+      <!--Da qui faccio partire la sezione testuale del sito-->
+      <main>
+        <section>
+          <!--I div con la classe .info-monopattino contengono al loro interno le informazioni relative ai tre mezzi, identificabili
+          tramite i nomi contenuti nei tag span-->
+
+          <div class="info-monopattino">
+            <!--L'input sottostante genera la checkbox spuntabile accanto al nome del monopattino; 
+            viene riutilizzato altre due volte più in basso, in maniera analoga.-->
+            <input type="checkbox" />
+            <span>Monopattino Gino22</span>
+
+            <!--Via in cui si trova il monopattino di Gino-->
+            <div>Via Guadalametri - a 220 metri da te</div>
+            <div>Stato carica:</div>
+
+            <!--Le hr sono state rielaborate tramite css, ora vanno ad indicare il livello di carica del monopattino.
+            sono presenti altre due hr nella pagina. Vengono introdotte dal div sopra ognuna di esse che cita "Stato carica"-->
+            <hr class="carica-gino" />
+          </div>
+
+          <div class="info-monopattino">
+            <!--Input checkbox riutilizzato qui-->
+            <input type="checkbox" />
+            <span>Monopattino Mike24</span>
+
+            <!--Via in cui si trova il monopattino di Mike-->
+            <div>Via Ricciardoni - a 420 metri da te</div>
+            <div>Stato carica:</div>
+
+            <!--hr riutilizzata qui-->
+            <hr class="carica-mike" />
+          </div>
+
+          <div class="info-monopattino">
+            <!--Input checkbox riutilizzato qui-->
+            <input type="checkbox" />
+            <span>Monopattino Fede125</span>
+
+            <!--Via in cui si trova il monopattino di Fede-->
+            <div>Via Mentarini - a 490 metri da te</div>
+            <div>Stato carica:</div>
+
+            <!--hr riutilizzata qui-->
+            <hr class="carica-fede" />
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,97 @@
+body {
+  /* Imposto una serie di font, anziché uno, per motivi di sicurezza, facendo sì che anche se non fosse possibile visualizzare uno dei tre, subentrerebbero gli altri */
+  font-family: Arial, Helvetica, sans-serif;
+  background-image: url(background.jpg);
+  background-size: 100%;
+}
+
+/* Classe del div che racchiude tutta la sezione informativa, costruito con proprietà generali così da non dover andare a riprenderle singolarmente più avanti */
+.container {
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 1170px;
+  padding-top: 95px;
+  padding-bottom: 110px;
+  /* Tenere da conto - margin: [top] [right] [bottom] [left] */
+  margin: 30px auto;
+  color: white;
+  border-radius: 20px;
+}
+
+/* Vado a chiamare il tag header, figlo diretto del div con classe container, assegnandogli una proprietà di colore e allineando il testo centralmente. 
+N.B. avrei anche semplicemente potuto chiamare direttamente Header.*/
+.container > header {
+  text-align: center;
+  color: #00dd00;
+}
+
+/* Imposto le proprietà fondamentali per strutturare il menù di navigazione.*/
+nav {
+  text-align: center;
+  background-color: #00dd00;
+  padding: 12px;
+  width: 81.5%;
+  margin: 5px auto;
+}
+
+/* Qui imposto le dimensioni del logo della compagnia e lo distanzio dal titolo della pagina di 5px */
+header > img {
+  width: 250px;
+  margin-bottom: 5px;
+}
+
+/* Qui imposto la grandezza del font del titolo della pagina */
+header > div {
+  font-size: 35px;
+}
+
+/* In questo punto vado a determinare la grandezza del font di tutti gli span figli diretti di un div.
+N.B. avrei anche potuto direttamente utilizzare span*/
+div > span {
+  font-size: 25px;
+}
+
+/* Delimito lo spazio in cui devono strutturarsi le informazioni contenute dentro il div con classe info-monopattino, determinando 
+inoltre la grandezza del font. */
+.info-monopattino {
+  margin: 22px auto;
+  width: 83%;
+  font-size: 16px;
+}
+
+/* Chiamo tutti i figli diretti del div con classe info-monopattino assegnando un valore di margine superiore */
+.info-monopattino > div {
+  margin-top: 5px;
+}
+
+/* Imposto le proprietà di base che tutte le hr della pagina condividono, così da poter dare loro una forma adeguata a rappresentare  il tempo
+rimanente di utilizzo dei Monopattini  */
+hr {
+  margin-top: 0.4%;
+  margin-left: 0px;
+  height: 30px;
+  border-radius: 5px;
+  border: 0px;
+}
+
+/* Imposto il colore e la larghezza delle diverse hr, segnalate tramite una classe specifica basata sul nome del proprietario del monopattino. 
+In questo modo vado a simulare i livelli di carica degli strumenti.*/
+.carica-gino {
+  background-color: rgb(240, 188, 75);
+  width: 38%;
+}
+
+.carica-mike {
+  background-color: rgb(45, 189, 9);
+  width: 65%;
+}
+
+.carica-fede {
+  background-color: rgb(216, 70, 70);
+  width: 15%;
+}
+
+/* Qui sotto sono andato a chiamare ogni div che si trova in terza posizione tra i figli diretti di .info-monopattino, attribuendogli poi il selector before
+per fare in modo di veder apparire una freccia e a seguire uno space all'inizio del div, tramite la proprietà content: "";  */
+.info-monopattino > div:nth-child(3)::before {
+  content: "\21A6"" ";
+}
